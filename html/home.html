@@ -1,9 +1,48 @@
 <html>
     <head>
-
-        <script src="./js/test.js"> </script>
+        <link rel="stylesheet" href="./../css/MainTable.css">
+        <script src="./../js/test.js"> </script>
     </head>
     <body>
-        <button onclick="getFood()">Food</button>
+        <div class="main_div">
+
+            <div class="backgound_image_div">
+                <img class="backgound_image" src="./../data/photoes/food-background.jpg"/>
+            </div>
+            <div class="top_panel">
+                <ul class="dynamic_menu_bar">
+                    <li >
+                        <a class="main_manu_item" onmouseout="makeInvisible('home')" onmouseover="makeVisible('home')">home</a>
+                        <ul style="visibility: hidden;" id="home" class="submenu">
+                            <li class="submenu_item">
+
+                            <a  href="">
+                                    1
+                                </a>
+                            </li>    
+                            <li class="submenu_item">
+
+                                <a  href="">
+                                    2
+                                </a>
+                            </li>    
+                            <li class="submenu_item">
+
+                                <a  href="">
+                                    3
+                                </a>
+                            </li>    
+                            <li class="submenu_item">
+                                <a  href="">
+                                    4
+                                </a>
+                            </li>    
+
+                            </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </body>
 </html>

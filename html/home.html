@@ -10,37 +10,85 @@
                 <img class="backgound_image" src="./../data/photoes/food-background.jpg"/>
             </div>
             <div class="top_panel">
-                <ul class="dynamic_menu_bar">
-                    <li >
-                        <a class="main_manu_item" onmouseout="makeInvisible('home')" onmouseover="makeVisible('home')">home</a>
-                        <ul style="visibility: hidden;" id="home" class="submenu">
+                <ul class="dynamic_menu_bar" style="overflow: hidden;">
+                    <li class="dynamic_menu_bar_item" id="home_par">
+                        <a class="dynamic_menu_bar_item_link" onmouseout="makeInvisible('home')" onmouseover="makeVisible('home')">HOME</a>
+                        <ul style="display: none;" onmouseout="makeInvisible('home')" onmouseover="makeVisible('home')" id="home" class="submenu">
+                            <li class="submenu_item">
+                            <a  href="">home1</a>
+                            </li>    
                             <li class="submenu_item">
 
+                                <a  href="">home2</a>
+                            </li>    
+                        </ul>
+                    </li>
+                    <li class="dynamic_menu_bar_item" id="MENU_par">
+                        <a class="dynamic_menu_bar_item_link" onmouseout="makeInvisible('MENU')" onmouseover="makeVisible('MENU')">MENU</a>
+                        <ul style="display: none;" onmouseout="makeInvisible('MENU')" onmouseover="makeVisible('MENU')" id="MENU" class="submenu">
+                            <li class="submenu_item">
                             <a  href="">
-                                    1
+                                    menu1
                                 </a>
                             </li>    
                             <li class="submenu_item">
 
                                 <a  href="">
-                                    2
+                                    menu2
+                                </a>
+                            </li>    
+                        </ul>
+                    </li>
+                    <li class="dynamic_menu_bar_item" id="ABOUT_par">
+                        <a class="dynamic_menu_bar_item_link" onmouseout="makeInvisible('ABOUT')" onmouseover="makeVisible('ABOUT')">ABOUT</a>
+                        <ul style="display: none;" id="ABOUT" onmouseout="makeInvisible('ABOUT')" onmouseover="makeVisible('ABOUT')" class="submenu">
+                            <li class="submenu_item">
+                            <a  href="">
+                                    ABOUT1
                                 </a>
                             </li>    
                             <li class="submenu_item">
 
                                 <a  href="">
-                                    3
+                                    home2
                                 </a>
                             </li>    
-                            <li class="submenu_item">
-                                <a  href="">
-                                    4
-                                </a>
-                            </li>    
-
                             </ul>
                     </li>
+                    <li class="dynamic_menu_bar_item" id="CONTACT_par">
+                        <a class="dynamic_menu_bar_item_link" onmouseout="makeInvisible('CONTACT')" onmouseover="makeVisible('CONTACT')">CONTACT</a>
+                        <ul style="display: none;;" id="CONTACT" onmouseout="makeInvisible('CONTACT')" onmouseover="makeVisible('CONTACT')" class="submenu">
+                            <li class="submenu_item">
+                            <a  href="">
+                                    home1
+                                </a>
+                            </li>    
+                            <li class="submenu_item">
 
+                                <a  href="">
+                                    home2
+                                </a>
+                            </li>   
+                            <li class="submenu_item">
+
+                                <a  href="">
+                                    home2
+                                </a>
+                            </li>   
+                            <li class="submenu_item">
+
+                                <a  href="">
+                                    home2
+                                </a>
+                            </li>   
+                            <li class="submenu_item">
+
+                                <a  href="">
+                                    home2
+                                </a>
+                            </li>    
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

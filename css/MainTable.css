@@ -35,20 +35,56 @@ body{
 
 
 .submenu{
-    position: relative;
+    position: absolute;
     background-color: black;
-    display: inline-block;
+    /* padding: 5%; */
+    /* height: 5%; */
+    width: 12%;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
 }
 .submenu_item{
     text-underline-offset :none;
+    text-align: left;
 }
+    
 a{
+    display: block;
     text-decoration: none;
     color: blanchedalmond;
+    
 }
 li{
+    /* float: left; */
     list-style: none;
 }
-.main_manu_item{
-    color: brown;
+.dynamic_menu_bar_item_link{
+    display: block;
+    /* float: left; */
+    padding: 0;
+    color: whitesmoke;
+    position: relative;
+    
+}
+
+.dynamic_menu_bar_item{
+    float: left;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+.dynamic_menu_bar{
+    /* position: relative;
+    width: 100%;    
+    left: auto;
+    top: auto;
+     */
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
 }

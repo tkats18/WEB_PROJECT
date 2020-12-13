@@ -1,134 +1,130 @@
-.backgound_image_div{
-   position: absolute;
-   width: 100%;
-   /* height: 100%; */
-   margin: 0;
-   padding: 0; 
-   overflow: hidden;
+.backgound_image_div {
+  position: absolute;
+  width: 100%;
+  /* height: 100%; */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-.backgound_image{
-    position: relative;
-    width: 100%;
-    /* top: 25%; */
-    /* height: 100%; */
+.backgound_image {
+  position: relative;
+  width: 100%;
+  /* top: 25%; */
+  /* height: 100%; */
 
-    /* padding: 0;
+  /* padding: 0;
     margin: 0; */
-
 }
-body{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-.main_div{
-    position: relative;
-    width: 100%;
-    height: 100%;
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
-.top_panel{
-    color: blue;   
-    position: relative;
-    width: 100%;
-    height: 30%;
-    z-index: 999999999 !important;
+.main_div {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-
-.submenu{
-    position: absolute;
-    background-color: black;
-    /* padding: 5%; */
-    /* height: 5%; */
-    width: 12%;
-    margin: 0 auto;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-
-}
-.submenu_item{
-    text-underline-offset :none;
-    text-align: left;
-}
-    
-a{
-    display: block;
-    text-decoration: none;
-    color: blanchedalmond;
-    
-}
-li{
-    /* float: left; */
-    list-style: none;
-}
-.dynamic_menu_bar_item_link{
-    display: block;
-    /* float: left; */
-    padding: 0;
-    color: whitesmoke;
-    position: relative;
-    
+.top_panel {
+  color: blue;
+  position: relative;
+  width: 100%;
+  height: 30%;
+  z-index: 999999999 !important;
 }
 
-.dynamic_menu_bar_item{
-    float: left;
-    justify-content: center;
-    align-items: center;
-    padding: 5%;
+.backgound_image {
+  height: 600px;
+  width: 100%;
 }
-.dynamic_menu_bar{
-    /* position: relative;
+.submenu {
+  position: absolute;
+  background-color: black;
+  /* padding: 5%; */
+  /* height: 5%; */
+  width: 12%;
+  margin: 0 auto;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.submenu_item {
+  text-underline-offset: none;
+  text-align: left;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: blanchedalmond;
+}
+li {
+  /* float: left; */
+  list-style: none;
+}
+.dynamic_menu_bar_item_link {
+  display: block;
+  /* float: left; */
+  padding: 0;
+  color: whitesmoke;
+  position: relative;
+}
+
+.dynamic_menu_bar_item {
+  float: left;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+.dynamic_menu_bar {
+  /* position: relative;
     width: 100%;    
     left: auto;
     top: auto;
      */
-     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
 }
 
-
-.footer{
-    position: absolute;
-    bottom: 5% auto;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40%;
+.footer {
+  position: absolute;
+  bottom: 5% auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
 }
 
-.info_card{
-    background-image: url("../data/photoes/bottom.jpg");
-    display: flex;
-    
+.info_card {
+  background-image: url("../data/photoes/bottom.jpg");
+  display: flex;
 }
-.info_card_items{
-    position: relative;
-    width: 50%;
-    color: black;
-    align-items: center;
-    margin: 5%;
-}
-
-.header{
-    display: flex;
-    /* float: left; */
-    width: 100%;
-    margin-top: 5%;
-    justify-content: center;
-    align-items: center;
+.info_card_items {
+  position: relative;
+  width: 50%;
+  color: black;
+  align-items: center;
+  margin: 5%;
 }
 
-.logo{
-    position: absolute;
-    margin: 10%auto;
-    width: 15%;
-    height: auto;
+.header {
+  display: flex;
+  /* float: left; */
+  width: 100%;
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
+}
 
+.logo {
+  position: absolute;
+  margin: 10%auto;
+  width: 15%;
+  height: auto;
 }

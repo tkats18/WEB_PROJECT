@@ -35,40 +35,45 @@ function addFields() {
     input1.setAttribute("class", "menu_list_main_header_search_item_input");
 
     console.log(parent);
+    var parentOfBoth = document.createElement("div");
+    parentOfBoth.setAttribute("class", "two_input_wrap");
 
-    parent.appendChild(input);
-    parent.appendChild(input1);
+    parentOfBoth.appendChild(input);
+    parentOfBoth.appendChild(input1);
+    parent.appendChild(parentOfBoth);
   }
 }
 
 const menu = `
-<div class="backgound_image">
-<div class="list_image">
-  <img class="backgound_image" src="../data/photoes/slide_1 (1).jpg">
-</div>
-      <div class="menu_list_main_header">
-        
-      <div class="menu_list_main_header_search">
-          
+  <div class="menu_list_main_header">
+    <div class="menu_list_main_header_search">
         <div class="menu_list_main_header_search_item">
-
-            <input id="search_id" placeholder="search by name" class="menu_list_main_header_search_item_input" type="text"></input>
-            <button  class="add_input">search</button>
-            </div>
-          
-          <div class="menu_list_main_header_search_item">
+          <input id="search_id" placeholder="search by name" class="menu_list_main_header_search_item_input" type="text"></input>
+          <button  class="add_input">search</button>
+        </div>
+        <div class="menu_list_main_header_search_ingredient">
+          <div class="ingredient_div">
               <button class="add_ingredients hid">add ingredients</button> 
-            <div id="container" name="container"></div>
+              <button class="add_ingredients hid">search by ingredients</button> 
           </div>
-
+          <div id="container" class="input_container" name="container">
+              <div class="two_input_wrap">
+                <input type="text" class="menu_list_main_header_search_item_input"></input>
+                <input type="text" class="menu_list_main_header_search_item_input"></input>
+              </div>
+          </div>
         </div>
-        </div>
-        <div class="list_content">
-
-          
-        </div>
-        </img>
+    </div>
   </div>
+  <div class="backgound_image">
+    <div class="list_image">
+        <img class="backgound_image" src="../data/photoes/slide_1 (1).jpg">
+    </div>
+    <div class="list_content">
+    </div>
+    </img>
+  </div>
+
 `;
 var searchStr = "";
 function getFood() {
@@ -81,13 +86,13 @@ function getFood() {
         (searchStr !== "" && food[i].name.includes(searchStr))
       ) {
         res += `
-        <div class="list_card">
-        <img class="list_img" width="100%" height="50%" src="${food[i].picture_url}">
-        <div class="list_container">
-        <h4><b>${food[i].name}</b></h4>
-        <p>${food[i].price}</p>
-        </div>
-        </div>
+          <div class="list_card">
+            <img class="list_img" width="100%" height="50%" src="${food[i].picture_url}">
+            <div class="list_container">
+                <h4><b>${food[i].name}</b></h4>
+                <p>${food[i].price}</p>
+            </div>
+          </div>
         `;
       }
     }

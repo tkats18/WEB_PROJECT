@@ -25,16 +25,33 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  display: table;
 }
 
 .top_panel {
   color: blue;
   position: relative;
   width: 100%;
-  height: 30%;
+  height: 15%;
   z-index: 999999999 !important;
 }
-
+@media only screen and (max-width: 500px) {
+  .header {
+    height: 30%;
+    float: none;
+  }
+  .menu_list_main_header_search_ingredient {
+    display: none !important;
+  }
+  .dynamic_menu_bar {
+    height: 70%;
+  }
+  .top_panel {
+    height: 30%;
+  }
+  .content {
+  }
+}
 .backgound_image {
   height: 600px;
   width: 100%;
@@ -71,7 +88,10 @@ li {
   color: whitesmoke;
   position: relative;
 }
-
+.content {
+  display: flex;
+  flex-direction: column;
+}
 .dynamic_menu_bar_item {
   float: left;
   justify-content: center;

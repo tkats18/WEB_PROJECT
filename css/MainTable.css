@@ -21,25 +21,82 @@ body {
   margin: 0;
 }
 
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #3a3a3a;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
 .main_div {
   position: relative;
   width: 100%;
   height: 100%;
   display: table;
 }
+.location_map {
+  height: 310px !important;
+  margin: 20px;
+  width: 525px !important;
+}
+.location_details {
+  color: #e4dcdc;
+  height: 310px !important;
 
+  /* border: solid; */
+  border-radius: 10px;
+  font-size: xx-large;
+  background-color: rgb(14 13 14 / 73%);
+}
+.location_container {
+  background-image: url("./../data/photoes/map-background_crop.jpg");
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10%;
+}
 .top_panel {
   color: blue;
   position: relative;
   width: 100%;
-  height: 15%;
+  height: fit-content;
   z-index: 999999999 !important;
+}
+.backgound_image_pic {
+  height: 600px;
+  width: 100%;
 }
 @media only screen and (max-width: 500px) {
   .header {
     height: 30%;
     float: none;
   }
+  .list_image {
+    display: none;
+  }
+  .info_card {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  /* .backgound_image_pic {
+    display: none;
+  } */
   .menu_list_main_header_search_ingredient {
     display: none !important;
   }
@@ -47,9 +104,13 @@ body {
     height: 70%;
   }
   .top_panel {
-    height: 30%;
+    height: 20%;
   }
-  .content {
+  .location_map {
+    width: 100% !important;
+  }
+  .location_container {
+    flex-direction: column;
   }
 }
 .backgound_image {
@@ -87,6 +148,10 @@ li {
   padding: 0;
   color: whitesmoke;
   position: relative;
+  cursor: pointer;
+}
+.dynamic_menu_bar_item_link:hover {
+  color: blue;
 }
 .content {
   display: flex;
@@ -113,12 +178,14 @@ li {
 
 .footer {
   position: absolute;
-  bottom: 5% auto;
+  /* bottom: 5% auto; */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40%;
+  height: 10%;
+  flex-direction: column;
+  /* margin: 5% 0%; */
 }
 
 .info_card {
@@ -127,24 +194,97 @@ li {
 }
 .info_card_items {
   position: relative;
-  width: 50%;
+  width: 80%;
   color: black;
   align-items: center;
   margin: 5%;
 }
-
+.info_card_item_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header_text_div {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .header {
   display: flex;
   /* float: left; */
   width: 100%;
   margin-top: 5%;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .logo {
-  position: absolute;
-  margin: 10%auto;
+  position: relative;
   width: 15%;
   height: auto;
+}
+
+.modal_ingredient_div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+  color: #3a3a3a;
+  justify-content: space-around;
+  width: 40%;
+  height: 500px;
+}
+.modal_div {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999999999 !important;
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal_img {
+  color: #3a3a3a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal_img > img {
+  height: 200px;
+  margin-top: 6%;
+}
+.modal_footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}
+.modal_instruction_div {
+  color: #3a3a3a;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.instuction_label {
+  margin: 10px auto;
+  font-size: x-large;
+  color: black;
+}
+.modal_inner_div {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 80vh;
+  overflow-y: auto;
+}
+.modal_content {
+  display: flex;
+  flex-direction: column;
 }

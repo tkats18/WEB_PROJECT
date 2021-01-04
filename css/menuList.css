@@ -20,7 +20,7 @@
 }
 .menu_list_main_header_search {
   width: 100%;
-  display: flex;
+  display: none;
   align-content: space-between;
 }
 .menu_list_main_header_search_ingredient {
@@ -44,7 +44,7 @@
   width: 15%;
   float: left;
   margin: 2%;
-  height: 35%;
+  height: 40%;
 }
 .add_ingredients {
   float: left;
@@ -112,7 +112,7 @@
     display: none;
   }
   .content {
-    height: 1000px;
+    height: 1150px;
   }
   #img {
     height: 90%;

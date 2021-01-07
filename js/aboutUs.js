@@ -105,7 +105,7 @@ export function aboutPageInitializationFunction() {
   setSlideShow(false);
   setMainContent(aboutUs);
   document.querySelector("div.footer").style.marginTop = "30px";
-  document.querySelector("div.content").style.height = "auto";
+  document.querySelector("div.content").style.height = "";
   exposeMap();
   document.getElementById("map").style.height = "30%";
 }

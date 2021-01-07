@@ -94,17 +94,12 @@ textarea {
     align-items: center;
     flex-direction: column;
   }
-  /* .backgound_image_pic {
-    display: none;
-  } */
-  .menu_list_main_header_search_ingredient {
-    display: none !important;
+  .backgound_image {
+    height: fit-content !important;
   }
+
   .dynamic_menu_bar {
     height: 70%;
-  }
-  .top_panel {
-    height: 20%;
   }
   .location_map {
     width: 100% !important;
@@ -222,7 +217,7 @@ li {
 
 .logo {
   position: relative;
-  width: 15%;
+  width: 100px;
   height: auto;
 }
 

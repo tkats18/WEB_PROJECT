@@ -20,7 +20,7 @@
 }
 .menu_list_main_header_search {
   width: 100%;
-  display: none;
+
   align-content: space-between;
 }
 .menu_list_main_header_search_ingredient {
@@ -39,13 +39,15 @@
 }
 
 .list_card {
-  box-shadow: 0 4px 8px 0 rgb(177 173 170);
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 82%);
   transition: 0.3s;
   width: 15%;
   float: left;
   margin: 2%;
   height: 40%;
+  cursor: pointer;
 }
+
 .add_ingredients {
   float: left;
   width: 20%;
@@ -71,11 +73,19 @@
   margin: 8px 0;
 }
 .list_card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(219, 214, 214, 0.432);
 }
 
 .list_container {
+  display: flex;
   padding: 2px 16px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  overflow-wrap: anywhere;
+
+  font-size: x-large;
 }
 .input_container {
   display: flex;
@@ -89,18 +99,49 @@
   position: relative;
 }
 
+.next_button {
+  cursor: pointer;
+  color: white;
+  z-index: 10000;
+  font-size: x-large;
+  margin: 0 5%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.previous_button {
+  cursor: pointer;
+  color: white;
+  z-index: 10000;
+  font-size: x-large;
+  margin: 0 5%;
+}
+
 @media only screen and (max-width: 500px) {
   .list_card {
     width: 45%;
+    height: 200px;
+  }
+  .list_content {
+    height: 100%;
   }
   .menu_list_main_header_search_item {
-    width: 100%;
+    width: 100% !important;
+  }
+  .menu_list_main_header_search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .logo {
     width: 35%;
   }
   .list_img {
-    height: 72%;
+    height: 60%;
   }
   .menu_list_main_header_search_item {
     display: flex;
@@ -111,9 +152,9 @@
   .hid {
     display: none;
   }
-  .content {
+  /* .content {
     height: 1150px;
-  }
+  } */
   #img {
     height: 90%;
   }
@@ -124,8 +165,14 @@
   .dynamic_menu_bar {
     display: inherit;
   }
+  .backgound_image_menu {
+    height: 1170px !important;
+  }
 }
-
+.backgound_image_menu {
+  height: 800px;
+  width: 100%;
+}
 .menu_list_main_header_search_item {
   float: left;
   width: 45%;

@@ -106,7 +106,7 @@ function homePageInitializationFunction() {
         </div>
     </div>
 `;
-  document.querySelector("div.content").style.height = "1150px";
+  //   document.querySelector("div.content").style.height = "1150px";
   document.querySelector("div.footer").style.marginTop = "0px";
 
   hideMap();

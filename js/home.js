@@ -5,8 +5,8 @@ const nextImageDelay = 3000;
 let currentImageCounter = 0;
 var isSlideShowOn = true;
 const slideshowImages = document.getElementsByClassName("slide_div");
-
 setInterval(nextImage, nextImageDelay);
+console.log(slideshowImages);
 if (slideshowImages[currentImageCounter])
   slideshowImages[currentImageCounter].style.opacity = 1;
 
@@ -19,7 +19,7 @@ function nextImage() {
     slideshowImages[currentImageCounter].style.opacity = 1;
   }
 }
-
+// nextImage();
 function setSlideShow(isOn) {
   console.log(isSlideShowOn);
   isSlideShowOn = isOn;
@@ -55,7 +55,6 @@ async function getSlideData() {
     newSlideDivDescP.setAttribute("class", "decription_text");
 
     newSlideDivDescpT.appendChild(newSlideDivDescP);
-    newSlideDivCard.appendChild(newSlideDivP);
 
     newSlideDivCard.appendChild(newSlideDivH1);
     newSlideDivCard.appendChild(newSlideDivDescpT);
@@ -64,6 +63,8 @@ async function getSlideData() {
     newSlideDiv.appendChild(newSlideDivCard);
     slideContent.appendChild(newSlideDiv);
   }
+  nextImage();
+  // document.getElementsByClassName("slide_div")[0].style.opacity = 1;
 }
 
 function homePageInitializationFunction() {
@@ -83,9 +84,13 @@ function homePageInitializationFunction() {
                 <br/>
             </div>
             <div style=" position: relative;display:flex; justify-content: center; align-items: center;">
-                <p>kasgdkhhhkjashkdjhjdahsjkkdjsakdsabjdasbdfjkbh
-                adsjfbhksjdhbfjkasbdfjkbhadsjfbhkdskajbhdjsabs
-                jdhbfjhbjhbjhbjhbjhbjbh
+                <p  style="overflow-wrap: anywhere; font-weight: bold;">
+                  We are a fresh and exciting new bar concept that features live
+                  music and craft beer. We are new to the scene and we are looking
+                  to get as many new customers as possible. We are a pub not a 
+                  bar, we want to be a place where everyone can enjoy a great evening. 
+                  We are a one stop shop when it comes to everything you may need 
+                  to know for a great night out.
                 </p>
             </div>
         </div>
@@ -98,21 +103,27 @@ function homePageInitializationFunction() {
                 <br/>
             </div>
             <div style=" position: relative;display:flex; justify-content: center; align-items: center;">
-                <p>kasgdkhhhkjashkdjhjdahsbjdasbdfjkbh
-                adsjfbhksjdhbfjkasbdfjkbhadsjfbhks
-                jdhbfjhbjhbjhbjhbjhbjbh
+                <p style="overflow-wrap: anywhere; font-weight: bold;">
+                  We also have a large selection of wines and spirits and we cater for
+                  large groups as well." We give you the opportunity to meet new people
+                  ,meet some interesting people and make new friends. Dax, our friendly
+                  and knowledgeable bartender has been in the hospitality industry for
+                  over 20 years. His experience includes the ownership of a few small bars
+                  and to know for a great night out.
                 </p>
             </div>
         </div>
     </div>
 `;
-  //   document.querySelector("div.content").style.height = "1150px";
   document.querySelector("div.footer").style.marginTop = "0px";
 
   hideMap();
   setMainContent(HomeHtml);
-  getSlideData();
   setSlideShow(true);
+  getSlideData();
+  // slideshowImages[currentImageCounter].style.opacity = 1;
+  console.log("omoasbdisba");
+  // nextImage();
 }
 
 export { homePageInitializationFunction, setSlideShow };

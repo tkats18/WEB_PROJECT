@@ -9,7 +9,7 @@ const contact = `
     <h1>Contact Us</h1>
 </div>
 <br><br>
-<form action="/action_page.php">
+
   <p for="fname">First Name</p>
   <input  type="text" id="fname" name="firstname" placeholder="Enter your name" required>
 
@@ -21,8 +21,8 @@ const contact = `
 
   <p >Your Message</p>
   <textarea id="subject" name="subject" placeholder="Enter your Message" style="height:200px"></textarea>
-  <input class="add_input" style="margin 0 auto;" type="submit" value="Submit">
-</form>
+  <input class="add_input send_class" style="margin 0 auto;" type="submit" value="Send"></input>
+
 </div>
 
 `;
@@ -32,6 +32,10 @@ export function contactPageInitializationFunction() {
   setMainContent(contact);
   document.querySelector("div.footer").style.marginTop = "30px";
   document.querySelector("div.content").style.height = "auto";
-  //   height: 15%;
+  document
+    .querySelector("input.send_class")
+    .addEventListener("click", function () {
+      alert("email sent.");
+    });
   hideMap();
 }

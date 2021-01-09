@@ -1,10 +1,18 @@
 <html>
     <head>
-        <link rel="stylesheet" href="./../css/MainTable.css">
+        <!-- <link rel="stylesheet" href="./../css/MainTable.css">
         <link rel="stylesheet" href="./../css/Slide.css">
-        <link rel="stylesheet" href="./../css/menuList.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../css/menuList.css"> -->
+        <link rel="stylesheet" href="./../css-output/contact.css">
+        <link rel="stylesheet" href="./../css-output/home.css">
+        <link rel="stylesheet" href="./../css-output/main.css">
+        <link rel="stylesheet" href="./../css-output/menu.css">
+        <link rel="stylesheet" href="./../css-output/modal.css">
+        <link rel="stylesheet" href="./../css-output/shared.css">
+        <!-- <link rel="stylesheet" href="./../css-output/modal.css"> -->
 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="main_div">
@@ -14,20 +22,17 @@
                     <div class="header_text_div">
                     
                         <div>
-                            +995 551 72 88 44
+                           599 99 99 99
                         </div>
                         <div>
-                            8:00 am – 11:30 pm
+                            8:00-19:30
                         </div>
                     </div>
-                    <img  class="logo" src="../data/photoes/logo.jpg">
+                    <img  class="logo head_logo" src="../data/photoes/logo.jpg">
                     <div class="header_text_div">
-
                         <div>
-                            contact
-                        </div>
-                        <div>
-                            about
+                            Kakha Bendukidze 
+                            Campus 0131 Tbilisi
                         </div>
                     </div>
                 </div>
@@ -82,8 +87,11 @@
         <div class="modal_div">
 
             <div class="modal_inner_div">
+                <div class="close_modal_button_div">
+                    <button class="close_modal add_input" style="width:36px; margin: 0;"><i class="fa fa-close"></i></button>
+                    <label class="modal_heading">Food Information</label>
+                </div>
 
-                <button class="close_modal">close</button>
                 <div class="modal_content">
                     
                 </div>
@@ -93,8 +101,8 @@
     </body>
     
     <script type="module" src="./../js/home.js"> </script>
-    <script type="module" src="./../js/menu.js"> </script>
     <script type="module" src="./../js/contentManager.js"> </script>
+    <script type="module" src="./../js/menu.js"> </script>
     <script>
         let map;
         function initMap() {

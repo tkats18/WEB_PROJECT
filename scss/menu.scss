@@ -1,0 +1,144 @@
+.menu_list_main_header_search {
+  width: 100%;
+  align-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.menu_list_main_header_search_ingredient {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.menu_list_main_header_search_item_input {
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.menu_list_main_header_search_item {
+  width: 100% !important;
+  display: flex;
+  float: left;
+  width: 45%;
+  margin: 2%;
+}
+.half_width {
+  width: 45%;
+}
+.two_input_wrap {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+.input_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.backgound_image_menu {
+  height: 800px;
+  width: 100%;
+}
+.list_content {
+  width: 100%;
+  height: 90%;
+  position: relative;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.next_button {
+  cursor: pointer;
+  color: white;
+  z-index: 10000;
+  font-size: x-large;
+  margin: 0 5%;
+}
+.previous_button {
+  cursor: pointer;
+  color: white;
+  z-index: 10000;
+  font-size: x-large;
+  margin: 0 5%;
+}
+.list_card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.82);
+  transition: 0.3s;
+  width: 15%;
+  float: left;
+  margin: 2%;
+  height: 40%;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(219, 214, 214, 0.432);
+  }
+}
+.list_container {
+  display: flex;
+  padding: 2px 16px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  overflow-wrap: anywhere;
+  font-size: x-large;
+}
+.menu_list_main {
+  width: 100%;
+  height: 140%;
+}
+.menu_list_main_header {
+  width: 100%;
+  height: 10%;
+  position: relative;
+}
+.list_image {
+  z-index: -1;
+  height: 0;
+}
+@media only screen and (max-width: 850px) {
+  .backgound_image_menu {
+    height: 1170px !important;
+  }
+  .menu_list_main_header_search {
+    flex-direction: column;
+  }
+  .list_img {
+    height: 60%;
+  }
+  .list_content {
+    height: 100%;
+  }
+  .list_image {
+    display: none;
+  }
+  .list_img {
+    height: 60%;
+  }
+  .list_card {
+    width: 21% !important;
+    height: 200px !important;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .add_button {
+    width: 50%;
+  }
+  .list_card {
+    width: 29% !important;
+    height: 200px !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .list_card {
+    width: 45% !important;
+    height: 200px !important;
+  }
+}

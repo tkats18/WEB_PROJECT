@@ -1,0 +1,72 @@
+.add_input {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #383d41;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info_card {
+  background-image: url("../data/photoes/bottom.jpg");
+  display: flex;
+}
+.info_card_items {
+  position: relative;
+  width: 80%;
+  color: black;
+  align-items: center;
+  margin: 5%;
+  > p {
+    overflow-wrap: anywhere;
+    overflow-wrap: anywhere;
+  }
+}
+.info_card_item_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.price {
+  font-size: 22px;
+  margin-bottom: 5%;
+  font-weight: bold;
+  color: black !important;
+}
+.backgound_image_div {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.backgound_image {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  width: 100%;
+}
+.backgound_image_pic {
+  height: 600px;
+  width: 100%;
+}
+@media only screen and (max-width: 500px) {
+  .backgound_image {
+    height: fit-content !important;
+  }
+  .info_card {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .add_input {
+    width: 100%;
+  }
+}

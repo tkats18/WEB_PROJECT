@@ -1,0 +1,10 @@
+.container {
+  border-radius: 5px;
+  background-color: #3a3a3a;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto; }
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 95%; } }

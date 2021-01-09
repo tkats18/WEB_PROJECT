@@ -15,14 +15,18 @@ const menu = `
     <div class="menu_list_main_header_search">
         <div class="menu_list_main_header_search_item">
           <div class="two_input_wrap">
+          <div class="select_container half_width">
             <select class="menu_list_main_header_search_item_input">
-              <option class="menu_list_main_header_search_item_input" >Name</option>
-              <option class="menu_list_main_header_search_item_input" >Name</option>
-              <option class="menu_list_main_header_search_item_input">Area</option>
-              <option class="menu_list_main_header_search_item_input">Main Ingredient</option>
-              <option class="menu_list_main_header_search_item_input">Category</option>
+              <option class="menu_list_main_header_search_item_input main_select" >Search..</option>
+              <option class="menu_list_main_header_search_item_input main_select" >Name</option>
+              <option class="menu_list_main_header_search_item_input main_select">Area</option>
+              <option class="menu_list_main_header_search_item_input main_select">Main Ingredient</option>
+              <option class="menu_list_main_header_search_item_input main_select">Category</option>
             </select>
+            </div>
+            <div class="text_input_container half_width">
             <input type="text" class="menu_list_main_header_search_item_input"></input>
+            </div>
           </div>
         </div>
         <div class="menu_list_main_header_search_ingredient">
@@ -46,30 +50,6 @@ const menu = `
   </div>
 
 `;
-// function addFields() {
-//   var parent = document.getElementById("container");
-
-//   console.log(parent.childNodes.length);
-//   if (parent.childNodes.length < 7) {
-//     var input = document.createElement("input");
-//     input.setAttribute("type", "text");
-//     console.log(parent);
-//     input.setAttribute("type", "text");
-//     input.setAttribute("class", "menu_list_main_header_search_item_input");
-
-//     var input1 = document.createElement("input");
-//     input1.setAttribute("type", "text");
-//     input1.setAttribute("class", "menu_list_main_header_search_item_input");
-
-//     console.log(parent);
-//     var parentOfBoth = document.createElement("div");
-//     parentOfBoth.setAttribute("class", "two_input_wrap");
-
-//     parentOfBoth.appendChild(input);
-//     parentOfBoth.appendChild(input1);
-//     parent.appendChild(parentOfBoth);
-//   }
-// }
 
 var searchStr = "";
 function getFood(food) {
@@ -115,47 +95,99 @@ function getFood(food) {
   }
 }
 var data;
+var allData;
 var start = 0;
-async function generateMenu(link) {
+
+function contains(searchData, id) {
+  if (searchData === null) return false;
+  for (var i = 0; i < searchData.length; i += 1) {
+    if (searchData[i].idMeal === id) return true;
+  }
+  return false;
+}
+
+async function generateSearchMenu(link) {
   console.log(link);
   const resp = await fetch(link);
   const res = await resp.json();
+  data = allData.filter((item) => contains(res.meals, item.idMeal));
+  getFood(data);
+}
+async function generateAllMeals(link) {
+  console.log(link);
+  const resp = await fetch(link);
+  const res = await resp.json();
+  allData = res.meals;
   data = res.meals;
   getFood(res.meals);
 }
 
-export function menuInitializationFunction() {
-  setSlideShow(false);
-  setMainContent(menu);
-  hideMap();
-  // document.querySelector("div.content").style.height = "1250px";
+var areaSelect = ``;
+var categorySelect = ``;
 
-  // document
-  //   .querySelector("button.add_ingredients")
-  //   .addEventListener("click", function () {
-  //     addFields();
-  //   });
-  generateMenu("https://www.themealdb.com/api/json/v1/1/search.php?s=");
+async function fetcher(link, object) {
+  const responseee = await fetch(link);
+  const res = await responseee.json();
+  var curOption = ``;
+  var resultHtml = `<select class="menu_list_main_header_search_item_input ${object}">`;
+  for (var i = 0; i < res.meals.length; i += 1) {
+    curOption = `
+      <option class="menu_list_main_header_search_item_input">${res.meals[i][object]}</option> 
+    `;
+    resultHtml += curOption;
+  }
+  resultHtml += `</select>`;
+  return resultHtml;
+}
 
+function addSearchListener() {
   document
     .querySelector("button.search_class")
     .addEventListener("click", function () {
-      console.log("movedii");
-      console.log(document.querySelector("select").selectedIndex);
-      console.log(
-        document.querySelector("input.menu_list_main_header_search_item_input")
-          .value
-      );
-      // console.log();
+      console.log(document.querySelector("select").childNodes[0].value);
       var curUrl = urls[document.querySelector("select").selectedIndex];
-      var curStr = document.querySelector(
-        "input.menu_list_main_header_search_item_input"
-      ).value;
+      var curStr = document.querySelector("div.text_input_container")
+        .childNodes[0].value;
       start = 0;
       if (document.querySelector("select").selectedIndex !== 0) {
-        generateMenu(curUrl + curStr);
+        generateSearchMenu(curUrl + curStr);
+      } else {
+        data = allData;
+        getFood(allData);
       }
     });
+}
+export function setAreaOptions() {
+  document.querySelector("div.text_input_container").innerHTML = categorySelect;
+}
+export function setCategoryOptions() {
+  document.querySelector("div.text_input_container").innerHTML = areaSelect;
+}
+function addSearchInputListeners() {
+  document.querySelector("select").addEventListener("change", function (e) {
+    console.log("movediii");
+    switch (e.target.selectedIndex) {
+      case 0:
+      case 1:
+      case 3:
+        document.querySelector(
+          "div.text_input_container"
+        ).innerHTML = `<input type="text" class="menu_list_main_header_search_item_input"></input>
+          `;
+        break;
+      case 2:
+        setAreaOptions();
+        break;
+      case 4:
+        document.querySelector(
+          "div.text_input_container"
+        ).innerHTML = areaSelect;
+        break;
+    }
+  });
+}
+
+function addPaginationListeners() {
   document
     .querySelector("h3.next_button")
     .addEventListener("click", function () {
@@ -172,4 +204,26 @@ export function menuInitializationFunction() {
         getFood(data.slice(start));
       }
     });
+}
+
+async function initializeConstants() {
+  areaSelect = await fetcher(
+    "https://www.themealdb.com/api/json/v1/1/list.php?c=list",
+    "strCategory"
+  );
+  categorySelect = await fetcher(
+    "https://www.themealdb.com/api/json/v1/1/list.php?a=list",
+    "strArea"
+  );
+}
+
+export function menuInitializationFunction() {
+  initializeConstants();
+  setSlideShow(false);
+  setMainContent(menu);
+  hideMap();
+  generateAllMeals("https://www.themealdb.com/api/json/v1/1/search.php?s=");
+  addSearchListener();
+  addSearchInputListeners();
+  addPaginationListeners();
 }

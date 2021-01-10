@@ -1,5 +1,5 @@
-import { setMainContent } from "./contentManager.js";
-import { hideMap } from "./aboutUs.js";
+// import { setMainContent } from "./contentManager.js";
+// import { hideMap } from "./aboutUs.js";
 
 const nextImageDelay = 3000;
 let currentImageCounter = 0;
@@ -126,4 +126,4 @@ function homePageInitializationFunction() {
   // nextImage();
 }
 
-export { homePageInitializationFunction, setSlideShow };
+// export { homePageInitializationFunction, setSlideShow };

@@ -1,12 +1,8 @@
-import { menuInitializationFunction } from "./menu.js";
-import { homePageInitializationFunction } from "./home.js";
-import { aboutPageInitializationFunction } from "./aboutUs.js";
-import { contactPageInitializationFunction } from "./contact.js";
-import { closeModal } from "./foodModal.js";
-
-export function setMainContent(htmlContent) {
-  document.querySelector("div.content").innerHTML = htmlContent;
-}
+// import { menuInitializationFunction } from "./menu.js";
+// import { homePageInitializationFunction } from "./home.js";
+// import { aboutPageInitializationFunction } from "./aboutUs.js";
+// import { contactPageInitializationFunction } from "./contact.js";
+// import { closeModal } from "./foodModal.js";
 
 function initialize() {
   homePageInitializationFunction();

@@ -1,7 +1,7 @@
-import { setSlideShow } from "./home.js";
-import { setMainContent } from "./contentManager.js";
-import { hideMap } from "./aboutUs.js";
-import { displayModal } from "./foodModal.js";
+// import { setSlideShow } from "./home.js";
+// import { setMainContent } from "./contentManager.js";
+// import { hideMap } from "./aboutUs.js";
+// import { displayModal } from "./foodModal.js";
 
 const urls = [
   "no url",
@@ -157,12 +157,6 @@ function addSearchListener() {
       }
     });
 }
-export function setAreaOptions() {
-  document.querySelector("div.text_input_container").innerHTML = categorySelect;
-}
-export function setCategoryOptions() {
-  document.querySelector("div.text_input_container").innerHTML = areaSelect;
-}
 function addSearchInputListeners() {
   document.querySelector("select").addEventListener("change", function (e) {
     console.log("movediii");
@@ -217,7 +211,7 @@ async function initializeConstants() {
   );
 }
 
-export function menuInitializationFunction() {
+function menuInitializationFunction() {
   initializeConstants();
   setSlideShow(false);
   setMainContent(menu);

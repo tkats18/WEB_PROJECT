@@ -1,6 +1,6 @@
-import { hideMap } from "./aboutUs.js";
-import { setMainContent } from "./contentManager.js";
-import { setSlideShow } from "./home.js";
+// import { hideMap } from "./aboutUs.js";
+// import { setMainContent } from "./contentManager.js";
+// import { setSlideShow } from "./home.js";
 // import { hideMap } from "./aboutUs.js";
 
 const contact = `
@@ -27,7 +27,7 @@ const contact = `
 
 `;
 
-export function contactPageInitializationFunction() {
+function contactPageInitializationFunction() {
   setSlideShow(false);
   setMainContent(contact);
   document.querySelector("div.footer").style.marginTop = "30px";

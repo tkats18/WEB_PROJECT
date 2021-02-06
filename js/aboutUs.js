@@ -1,5 +1,5 @@
-// import { setMainContent } from "./contentManager.js";
-// import { setSlideShow } from "./home.js";
+import { setMainContent } from "./contentManager.js";
+import { setSlideShow } from "./home.js";
 
 const aboutUs = `
     <div class="info_card">
@@ -93,7 +93,7 @@ const aboutUs = `
     </div>
 
 `;
-function hideMap() {
+export function hideMap() {
   document.querySelector("div.location_container").style.display = "none";
 }
 
@@ -101,7 +101,7 @@ function exposeMap() {
   document.querySelector("div.location_container").style.display = "flex";
 }
 
-function aboutPageInitializationFunction() {
+export function aboutPageInitializationFunction() {
   setSlideShow(false);
   setMainContent(aboutUs);
   document.querySelector("div.footer").style.marginTop = "30px";

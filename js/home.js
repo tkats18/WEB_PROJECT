@@ -1,5 +1,5 @@
-// import { setMainContent } from "./contentManager.js";
-// import { hideMap } from "./aboutUs.js";
+import { setMainContent } from "./contentManager.js";
+import { hideMap } from "./aboutUs.js";
 
 const nextImageDelay = 3000;
 let currentImageCounter = 0;
@@ -20,7 +20,7 @@ function nextImage() {
   }
 }
 // nextImage();
-function setSlideShow(isOn) {
+export function setSlideShow(isOn) {
   console.log(isSlideShowOn);
   isSlideShowOn = isOn;
 }
@@ -67,7 +67,7 @@ async function getSlideData() {
   // document.getElementsByClassName("slide_div")[0].style.opacity = 1;
 }
 
-function homePageInitializationFunction() {
+export function homePageInitializationFunction() {
   const HomeHtml = `
     <div class="backgound_image">
         <img class="backgound_image_pic" src="./../data/photoes/slide_1 (1).jpg">

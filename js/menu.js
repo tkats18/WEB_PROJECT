@@ -1,7 +1,7 @@
-// import { setSlideShow } from "./home.js";
-// import { setMainContent } from "./contentManager.js";
-// import { hideMap } from "./aboutUs.js";
-// import { displayModal } from "./foodModal.js";
+import { setSlideShow } from "./home.js";
+import { setMainContent } from "./contentManager.js";
+import { hideMap } from "./aboutUs.js";
+import { displayModal } from "./foodModal.js";
 
 const urls = [
   "no url",
@@ -211,7 +211,7 @@ async function initializeConstants() {
   );
 }
 
-function menuInitializationFunction() {
+export function menuInitializationFunction() {
   initializeConstants();
   setSlideShow(false);
   setMainContent(menu);
@@ -220,4 +220,11 @@ function menuInitializationFunction() {
   addSearchListener();
   addSearchInputListeners();
   addPaginationListeners();
+}
+
+export function setAreaOptions() {
+  document.querySelector("div.text_input_container").innerHTML = categorySelect;
+}
+export function setCategoryOptions() {
+  document.querySelector("div.text_input_container").innerHTML = areaSelect;
 }

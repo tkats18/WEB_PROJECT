@@ -1,4 +1,4 @@
-// import { setAreaOptions, setCategoryOptions } from "./menu.js";
+import { setAreaOptions, setCategoryOptions } from "./menu.js";
 
 function addEventListeners(documentObj, item, seterFunction, index) {
   document.querySelector(documentObj).addEventListener("click", function () {
@@ -13,14 +13,8 @@ function addEventListeners(documentObj, item, seterFunction, index) {
     document.querySelector("button.search_class").click();
   });
 }
-function setAreaOptions() {
-  document.querySelector("div.text_input_container").innerHTML = categorySelect;
-}
-function setCategoryOptions() {
-  document.querySelector("div.text_input_container").innerHTML = areaSelect;
-}
 
-function displayModal(data) {
+export function displayModal(data) {
   var modal_content = document.querySelector("div.modal_content");
   var new_modal_content = "";
   console.log(data);
@@ -75,7 +69,7 @@ function displayModal(data) {
   );
 }
 
-function closeModal() {
+export function closeModal() {
   var modal = document.querySelector("div.modal_div");
   modal.style.display = "none";
 }

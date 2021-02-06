@@ -17,53 +17,11 @@
     <body>
         <div class="main_div">
 
-            <div class="top_panel">
-                <div class="header" >
-                    <div class="header_text_div">
-                    
-                        <div>
-                           599 99 99 99
-                        </div>
-                        <div>
-                            8:00-19:30
-                        </div>
-                    </div>
-                    <img  class="logo head_logo" src="../data/photoes/logo.jpg">
-                    <div class="header_text_div">
-                        <div>
-                            Kakha Bendukidze 
-                            Campus 0131 Tbilisi
-                        </div>
-                    </div>
-                </div>
-                <ul class="dynamic_menu_bar" style="overflow: hidden;">
-                    <li class="dynamic_menu_bar_item" id="home_par">
-                        <a class="dynamic_menu_bar_item_link home_link_class" >HOME</a>
-                        
-                    </li>
-                    <li class="dynamic_menu_bar_item" id="MENU_par">
-                        <a class="dynamic_menu_bar_item_link menu_link_class">MENU</a>
-                        
-                    </li>
-                    <li class="dynamic_menu_bar_item" id="ABOUT_par">
-                        <a class="dynamic_menu_bar_item_link about_link_class" >ABOUT</a>
-                        
-                    </li>
-                    <li class="dynamic_menu_bar_item" id="CONTACT_par">
-                        <a class="dynamic_menu_bar_item_link contact_link_class" >CONTACT</a>
-                        
-                    </li>
-                </ul>
-            </div>
+            <div class="top_panel"></div>
  
-            <div class="content">
-                
-            </div>
-            
-            
+            <div class="content"></div>
             
             <div class="location_container">
-
                 <div class="location_details">
                     <address style="text-align: center;">
                         COUNTRY: Georgia <br><br> 
@@ -77,38 +35,40 @@
 
             <div class="footer">
                 <img  class="logo" src="../data/photoes/logo.jpg">
-                <div >
-                    
-                    <div >
+                <div>
+                    <div>
                         Copyright © 2020 TKATS. All Rights Reserved.
                     </div>
                 </div>
-        </div>
-        <div class="modal_div">
-
-            <div class="modal_inner_div">
-                <div class="close_modal_button_div">
-                    <button class="close_modal add_input" style="width:36px; margin: 0;"><i class="fa fa-close"></i></button>
-                    <label class="modal_heading">Food Information</label>
-                </div>
-
-                <div class="modal_content">
-                    
-                </div>
             </div>
-        </div>
-        
+
+            <div class="modal_div">
+                <div class="modal_inner_div">
+                    <div class="close_modal_button_div">
+                        <button class="close_modal add_input" style="width:36px; margin: 0;"><i class="fa fa-close"></i></button>
+                        <label class="modal_heading">Food Information</label>
+                    </div>
+                    <div class="modal_content">
+                    </div>
+                </div>
+            </div></div>
     </body>
-    <script  src="./../js/mapManager.js"> </script>
-    <script  src="./../js/aboutUs.js"> </script>
-    <script  src="./../js/home.js"> </script>
-    <script  src="./../js/contact.js"> </script>
-    <script  src="./../js/foodModal.js"> </script>
-    <script  src="./../js/menu.js"> </script>
+    <script type="module" src="./../js/navigation.js"> </script>
+    <script type="module" src="./../js/aboutUs.js"> </script>
+    <script type="module" src="./../js/home.js"> </script>
+    <script type="module" src="./../js/contact.js"> </script>
+    <script type="module" src="./../js/foodModal.js"> </script>
+    <script type="module" src="./../js/menu.js"> </script>
     
-    <script  src="./../js/contentManager.js"> </script>
+    <script type="module" src="./../js/contentManager.js"> </script>
     <script>
-        
+        let map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8,
+            });
+        }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
 

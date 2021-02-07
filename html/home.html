@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="./../css-output/modal.css">
         <link rel="stylesheet" href="./../css-output/shared.css">
         <!-- <link rel="stylesheet" href="./../css-output/modal.css"> -->
-
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -45,8 +45,10 @@
             <div class="modal_div">
                 <div class="modal_inner_div">
                     <div class="close_modal_button_div">
-                        <button class="close_modal add_input" style="width:36px; margin: 0;"><i class="fa fa-close"></i></button>
+                        <button id="back_button" class="close_modal add_input back_button" style="width:36px; margin: 0;"><i class="fas fa-chevron-circle-left"></i></button>
+                        <!-- <button class="close_modal add_input" style="width:36px; margin: 0;"><i class="fa fa-close"></i></button> -->
                         <label class="modal_heading">Food Information</label>
+                        <button id="close_button_id" class="close_modal add_input" style="width:36px; margin: 0;"><i class="fa fa-close"></i></button>
                     </div>
                     <div class="modal_content">
                     </div>
@@ -61,6 +63,7 @@
     <script type="module" src="./../js/menu.js"> </script>
     
     <script type="module" src="./../js/contentManager.js"> </script>
+    <!-- <script type="module" src="./../js/bundle.js/main.js"> </script>  -->
     <script>
         let map;
         function initMap() {

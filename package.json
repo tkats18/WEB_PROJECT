@@ -1,0 +1,24 @@
+{
+  "name": "web_project",
+  "version": "1.0.0",
+  "description": "Final Project For Front Class",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkats18/WEB_PROJECT.git"
+  },
+  "author": "Tato Katsitadze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tkats18/WEB_PROJECT/issues"
+  },
+  "homepage": "https://github.com/tkats18/WEB_PROJECT#readme"
+}

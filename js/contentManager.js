@@ -28,7 +28,7 @@ function addPageEventListeners() {
       window.location.hash = "contact";
     });
   document
-    .querySelector("button.close_modal")
+    .getElementById("close_button_id")
     .addEventListener("click", function () {
       closeModal();
     });
@@ -52,7 +52,7 @@ function hashHandler() {
       ? window.location.hash.substr(1)
       : "home"
   );
-}
+} 
 
 window.addEventListener("hashchange", hashHandler, false);
 

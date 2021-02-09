@@ -12,6 +12,33 @@
     margin-top: 20px;
   }
 }
+.ingredient_modal_head {
+  margin: 0 auto;
+  color: black;
+  height: 60px !important;
+  text-align: center;
+}
+.ingredient_modal_str {
+  text-align: center;
+}
+.ingrediet_modal_main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5%;
+}
+.ingredient_data {
+  height: 100%;
+  width: 50%;
+  margin-top: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.ingredient_description {
+  margin-top: 15px;
+}
 .modal_div {
   display: none;
   position: fixed;
@@ -22,7 +49,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modal_header {
@@ -69,6 +96,15 @@
   color: #fff;
   font-weight: 300;
   font-family: Arial, sans-serif;
+  &:hover {
+    background-color: brown;
+  }
+}
+.ingredient_link {
+  &:hover {
+    color: brown;
+    cursor: pointer;
+  }
 }
 .modal_footer {
   display: flex;
@@ -99,7 +135,7 @@
   font-weight: bold;
 }
 .modal_inner_div {
-  background-image: url("./../data/photoes/dessert-figs-cream-glasses-drinks-blur-wallpaper-4k-ultra-hd.jpg");
+  background-image: url("./../data/processedPhotoes/modal_background.jpg");
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
@@ -114,6 +150,7 @@
 .close_modal_button_div {
   width: 100%;
   height: 17%;
+  margin-bottom: 20px;
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
@@ -135,6 +172,18 @@
 .modal_category_parag {
   cursor: pointer;
 }
+@media only screen and (max-width: 700px) {
+  .ingrediet_modal_main {
+    flex-direction: column;
+  }
+  .ingredient_data {
+    margin-top: 25px !important;
+    width: 90%;
+  }
+  .ingredient_modal_str {
+    font-size: 20px;
+  }
+}
 @media only screen and (max-width: 900px) {
   .modal_header {
     flex-direction: column;
@@ -144,6 +193,9 @@
   }
 }
 @media only screen and (max-width: 500px) {
+  html {
+    font-size: unset !important;
+  }
   .instuction_label {
     font-size: large;
     margin-left: 0;

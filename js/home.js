@@ -1,5 +1,4 @@
 import { setMainContent } from "./contentManager.js";
-import { hideMap } from "./aboutUs.js";
 
 const nextImageDelay = 3000;
 let currentImageCounter = 0;
@@ -70,14 +69,14 @@ async function getSlideData() {
 export function homePageInitializationFunction() {
   const HomeHtml = `
     <div class="backgound_image">
-        <img class="backgound_image_pic" src="./../data/photoes/slide_1 (1).jpg">
+        <img class="backgound_image_pic" src="./../data/processedPhotoes/main_page_background.jpg">
         <div class="slide_divs_container"></div>
         </div>
         <br style="height: 30%;"/> <br/> <br/> <br/> <br/>
         <div class="info_card">
         <div class="info_card_items">
             <div style=" position: relative;display:flex; justify-content: center; margin-bottom: 5%; align-items: center;">
-                <img   src="../data/photoes/icon_1.png">
+                <img   src="../data/processedPhotoes/icon_1.png">
             </div>
             <div style=" position: relative;display:flex; justify-content: center; align-items: center;">
                 <p style="margin-bottom: 5%;" class="price">Delivery</p>
@@ -96,7 +95,7 @@ export function homePageInitializationFunction() {
         </div>
         <div class="info_card_items">
             <div style=" position: relative;display:flex; justify-content: center; margin-bottom: 5%; align-items: center;">
-                <img   src="../data/photoes/icon_2.png">
+                <img   src="../data/processedPhotoes/icon_2.png">
             </div>
             <div style=" position: relative;display:flex; justify-content: center; align-items: center;">
                 <p style="margin-bottom: 5%;" class="price">Recipe</p>
@@ -117,7 +116,6 @@ export function homePageInitializationFunction() {
 `;
   document.querySelector("div.footer").style.marginTop = "0px";
 
-  hideMap();
   setMainContent(HomeHtml);
   setSlideShow(true);
   getSlideData();

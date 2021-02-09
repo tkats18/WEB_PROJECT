@@ -1,6 +1,5 @@
 import { setSlideShow } from "./home.js";
 import { setMainContent } from "./contentManager.js";
-import { hideMap } from "./aboutUs.js";
 import { displayModal } from "./foodModal.js";
 
 const urls = [
@@ -37,8 +36,9 @@ const menu = `
         </div>
     </div>
   <div class="backgound_image_menu">
+
     <div class="list_image">
-        <img class="backgound_image" style="height:680px !important;" src="../data/photoes/slide_1 (1).jpg">
+        <img class="backgound_image" style="height:680px !important;" src="../data/processedPhotoes/main_page_background.jpg">
     </div>
     <div class="list_content">
     </div>
@@ -215,7 +215,6 @@ export function menuInitializationFunction() {
   initializeConstants();
   setSlideShow(false);
   setMainContent(menu);
-  hideMap();
   generateAllMeals("https://www.themealdb.com/api/json/v1/1/search.php?s=");
   addSearchListener();
   addSearchInputListeners();

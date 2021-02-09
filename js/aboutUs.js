@@ -7,7 +7,7 @@ const aboutUs = `
 
     <div class="info_card_items">
             <div style=" position: relative;display:flex; justify-content: center; margin-bottom: 5%; align-items: center;">
-                <img   src="../data/photoes/food.png" width="94" height="100">
+                <img   src="../data/processedPhotoes/about_us_icon4.png" width="94" height="100">
             </div>
             <div style=" position: relative;display:flex; justify-content: center; align-items: center;">
                 <p style="margin-bottom: 5%; font-weight: bold; color:black;" class="price">Who Are We?</p>
@@ -27,7 +27,7 @@ const aboutUs = `
         </div>
         <div class="info_card_items">
             <div style=" position: relative;display:flex; justify-content: center; margin-bottom: 5%; align-items: center;">
-                <img   src="../data/photoes/2102350.png" width="94" height="100">
+                <img   src="../data/processedPhotoes/about_us_icon2.png" width="94" height="100">
             </div>
             <div style=" position: relative;display:flex; justify-content: center; align-items: center;">
                 <p style="margin-bottom: 5%; font-weight: bold; color:black;" class="price">Friendly Environment</p>
@@ -51,7 +51,7 @@ const aboutUs = `
 
     <div class="info_card_items">
             <div style=" position: relative;display:flex; justify-content: center; margin-bottom: 5%; align-items: center;">
-                <img   src="../data/photoes/129226.png" width="94" height="100">
+                <img   src="../data/processedPhotoes/about_us_icon1.png" width="94" height="100">
             </div>
             <div style=" position: relative;display:flex; justify-content: center; align-items: center;">
                 <p style="margin-bottom: 5%; font-weight: bold; color:black;" class="price">Who Are We?</p>
@@ -70,7 +70,7 @@ const aboutUs = `
         </div>
         <div class="info_card_items">
             <div style=" position: relative;display:flex; justify-content: center; margin-bottom: 5%; align-items: center;">
-                <img   src="../data/photoes/1732202.png" width="94" height="100">
+                <img   src="../data/processedPhotoes/about_us_icon3.png" width="94" height="100">
             </div>
             <div style=" position: relative;display:flex; justify-content: center; align-items: center;">
                 <p style="margin-bottom: 5%; font-weight: bold; color:black;" class="price">Friendly Environment</p>
@@ -93,19 +93,10 @@ const aboutUs = `
     </div>
 
 `;
-export function hideMap() {
-  document.querySelector("div.location_container").style.display = "none";
-}
-
-function exposeMap() {
-  document.querySelector("div.location_container").style.display = "flex";
-}
 
 export function aboutPageInitializationFunction() {
   setSlideShow(false);
   setMainContent(aboutUs);
   document.querySelector("div.footer").style.marginTop = "30px";
   document.querySelector("div.content").style.height = "";
-  exposeMap();
-  document.getElementById("map").style.height = "30%";
 }

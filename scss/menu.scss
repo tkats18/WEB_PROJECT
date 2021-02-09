@@ -26,7 +26,13 @@
   margin: 2%;
 }
 .half_width {
-  width: 45%;
+  width: 42%;
+}
+.text_input_container {
+  margin-right: 16px;
+}
+.select_container {
+  margin-left: 16px;
 }
 .two_input_wrap {
   width: 100%;
@@ -111,6 +117,7 @@
   }
   .list_img {
     height: 60%;
+    height: 60%;
   }
   .list_content {
     height: 100%;
@@ -118,24 +125,17 @@
   .list_image {
     display: none;
   }
-  .list_img {
-    height: 60%;
-  }
   .list_card {
     width: 21% !important;
     height: 200px !important;
   }
 }
 @media only screen and (max-width: 650px) {
-  .add_button {
-    width: 50%;
-  }
   .list_card {
     width: 29% !important;
     height: 200px !important;
   }
 }
-
 @media only screen and (max-width: 500px) {
   .list_card {
     width: 45% !important;

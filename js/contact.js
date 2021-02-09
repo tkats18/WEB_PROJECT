@@ -1,4 +1,3 @@
-import { hideMap } from "./aboutUs.js";
 import { setMainContent } from "./contentManager.js";
 import { setSlideShow } from "./home.js";
 
@@ -36,5 +35,4 @@ export function contactPageInitializationFunction() {
     .addEventListener("click", function () {
       alert("email sent.");
     });
-  hideMap();
 }

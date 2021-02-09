@@ -55,14 +55,14 @@ textarea {
   width: 525px !important;
 }
 .location_details {
-  color: #e4dcdc;
+  color: rgb(55, 101, 238);
   height: 310px !important;
   border-radius: 10px;
   font-size: xx-large;
   background-color: rgba(14, 13, 14, 0.73);
 }
 .location_container {
-  background-image: url("./../data/photoes/map-background_crop.jpg");
+  background-image: url("./../data/processedPhotoes/map-background_crop.jpg");
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -70,7 +70,7 @@ textarea {
   margin-top: 10%;
 }
 .top_panel {
-  color: blue;
+  color: rgb(55, 101, 238);
   position: relative;
   width: 100%;
   height: fit-content;
@@ -104,7 +104,7 @@ li {
   position: relative;
   cursor: pointer;
   &:hover {
-    color: blue;
+    color: rgb(55, 101, 238);
   }
 }
 .content {
@@ -161,6 +161,7 @@ li {
   }
   .dynamic_menu_bar {
     height: 70%;
+    display: inherit;
   }
   .location_map {
     width: 100% !important;
@@ -177,9 +178,6 @@ li {
   .dynamic_menu_bar_item {
     width: 100%;
     text-align: center;
-  }
-  .dynamic_menu_bar {
-    display: inherit;
   }
   .logo {
     width: 35%;

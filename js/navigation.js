@@ -8,7 +8,7 @@ const navigationHtml = `<div class="header" >
     8:00-19:30
     </div>
     </div>
-    <img  class="logo head_logo" src="../data/photoes/logo.jpg">
+    <img  class="logo head_logo" src="../data/processedPhotoes/logo.jpg">
     <div class="header_text_div">
     <div>
     Kakha Bendukidze 
@@ -65,7 +65,9 @@ export function initializeNavigation() {
   document.querySelector("div.top_panel").innerHTML = navigationHtml;
   document.querySelector("i.nav_icon").addEventListener("click", function () {
     if (
-      document.querySelector("ul.dynamic_menu_bar").style.display === "none"
+      document.querySelector("ul.dynamic_menu_bar").style.display === "none" ||
+      document.querySelector("ul.dynamic_menu_bar").style.display === "" ||
+      document.querySelector("ul.dynamic_menu_bar").style.display === undefined
     ) {
       document.querySelector("ul.dynamic_menu_bar").style.display = "block";
     } else {

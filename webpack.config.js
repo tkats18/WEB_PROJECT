@@ -3,6 +3,11 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
+  entry: "./js/menu.js",
+  output: {
+    filename: "index.js",
+    path: path.resolve(__dirname, "bundleJs"),
+  },
   plugins: [
     new CopyWebpackPlugin({
       patterns: [

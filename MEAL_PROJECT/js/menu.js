@@ -57,7 +57,6 @@ function getFood(food) {
   var map = {};
   if (food !== null) {
     for (var i = 0; i < food.length; i += 1) {
-      console.log(i);
       if (i < 10) {
         if (
           searchStr === "" ||
@@ -79,14 +78,11 @@ function getFood(food) {
   }
 
   document.querySelector("div.list_content").innerHTML = res;
-  console.log(document.querySelector("div.list_content").childNodes);
   for (
     var i = 0;
     i < document.querySelector("div.list_content").children.length;
     i += 1
   ) {
-    console.log(document.querySelector("div.list_content").children[i]);
-
     document
       .querySelector("div.list_content")
       .children[i].addEventListener("click", (e) => {
@@ -107,14 +103,12 @@ function contains(searchData, id) {
 }
 
 async function generateSearchMenu(link) {
-  console.log(link);
   const resp = await fetch(link);
   const res = await resp.json();
   data = allData.filter((item) => contains(res.meals, item.idMeal));
   getFood(data);
 }
 async function generateAllMeals(link) {
-  console.log(link);
   const resp = await fetch(link);
   const res = await resp.json();
   allData = res.meals;
@@ -144,7 +138,6 @@ function addSearchListener() {
   document
     .querySelector("button.search_class")
     .addEventListener("click", function () {
-      console.log(document.querySelector("select").childNodes[0].value);
       var curUrl = urls[document.querySelector("select").selectedIndex];
       var curStr = document.querySelector("div.text_input_container")
         .childNodes[0].value;
@@ -159,7 +152,6 @@ function addSearchListener() {
 }
 function addSearchInputListeners() {
   document.querySelector("select").addEventListener("change", function (e) {
-    console.log("movediii");
     switch (e.target.selectedIndex) {
       case 0:
       case 1:

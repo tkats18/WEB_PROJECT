@@ -2,6 +2,7 @@ import { menuInitializationFunction } from "./menu.js";
 import { homePageInitializationFunction } from "./home.js";
 import { aboutPageInitializationFunction } from "./aboutUs.js";
 import { contactPageInitializationFunction } from "./contact.js";
+import { providersPageInitializationFunction } from "./providers.js";
 import { closeModal } from "./foodModal.js";
 import { initializeNavigation, activateCurrentLink } from "./navigation.js";
 
@@ -28,6 +29,11 @@ function addPageEventListeners() {
       window.location.hash = "contact";
     });
   document
+    .querySelector("a.providers_link_class")
+    .addEventListener("click", function (e) {
+      window.location.hash = "providers";
+    });
+  document
     .getElementById("close_button_id")
     .addEventListener("click", function () {
       closeModal();
@@ -43,6 +49,7 @@ const routs = {
   menu: menuInitializationFunction,
   about: aboutPageInitializationFunction,
   contact: contactPageInitializationFunction,
+  providers: providersPageInitializationFunction,
 };
 
 function hashHandler() {
@@ -52,7 +59,7 @@ function hashHandler() {
       ? window.location.hash.substr(1)
       : "home"
   );
-} 
+}
 
 window.addEventListener("hashchange", hashHandler, false);
 

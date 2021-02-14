@@ -55,7 +55,7 @@ textarea {
   width: 525px !important;
 }
 .location_details {
-  color: rgb(55, 101, 238);
+  color: #3765ee;
   height: 310px !important;
   border-radius: 10px;
   font-size: xx-large;
@@ -70,7 +70,7 @@ textarea {
   margin-top: 10%;
 }
 .top_panel {
-  color: rgb(55, 101, 238);
+  color: #3765ee;
   position: relative;
   width: 100%;
   height: fit-content;
@@ -104,7 +104,7 @@ li {
   position: relative;
   cursor: pointer;
   &:hover {
-    color: rgb(55, 101, 238);
+    color: #3765ee;
   }
 }
 .content {
@@ -127,6 +127,7 @@ li {
 .footer {
   position: absolute;
   width: 100%;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;

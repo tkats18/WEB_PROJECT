@@ -64,7 +64,6 @@ export function displayModal(data) {
 
   new_modal_content += "</div>";
   new_modal_content += "</div>";
-  console.log(data);
   modal_content.innerHTML = new_modal_content;
 
   document.querySelector("div.modal_div").style.display = "block";

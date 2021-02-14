@@ -17,30 +17,27 @@ const navigationHtml = `<div class="header" >
     </div>
     </div>
     <div class="burger_div">
-    <ul>
-        <li class="chosen">
-        </li>
-    
+      <ul>
+        <li class="chosen"></li>
         </ul>
-    <i class="fa fa-bars nav_icon"></i>
+      <i class="fa fa-bars nav_icon"></i>
     </div>
     <ul class="dynamic_menu_bar" style="overflow: hidden;">
-    <li class="dynamic_menu_bar_item" id="home_par">
-    <a class="dynamic_menu_bar_item_link home_link_class" >HOME</a>
-    
-    </li>
-    <li class="dynamic_menu_bar_item" id="MENU_par">
-    <a class="dynamic_menu_bar_item_link menu_link_class">MENU</a>
-    
-    </li>
-    <li class="dynamic_menu_bar_item" id="ABOUT_par">
-    <a class="dynamic_menu_bar_item_link about_link_class" >ABOUT</a>
-    
-    </li>
-    <li class="dynamic_menu_bar_item" id="CONTACT_par">
-    <a class="dynamic_menu_bar_item_link contact_link_class" >CONTACT</a>
-    
-    </li>
+      <li class="dynamic_menu_bar_item" id="home_par">
+        <a class="dynamic_menu_bar_item_link home_link_class" >HOME</a>
+      </li>
+      <li class="dynamic_menu_bar_item" id="MENU_par">
+        <a class="dynamic_menu_bar_item_link menu_link_class">MENU</a>
+      </li>
+      <li class="dynamic_menu_bar_item" id="ABOUT_par">
+        <a class="dynamic_menu_bar_item_link about_link_class" >ABOUT</a>
+      </li>
+      <li class="dynamic_menu_bar_item" id="CONTACT_par">
+        <a class="dynamic_menu_bar_item_link contact_link_class" >CONTACT</a>
+      </li>
+      <li class="dynamic_menu_bar_item" id="PROVIDER_par">
+        <a class="dynamic_menu_bar_item_link providers_link_class" >PROVIDERS</a>
+      </li>
     </ul>
    
     `;
@@ -48,7 +45,6 @@ const navigationHtml = `<div class="header" >
 function deactivateAllLinks() {
   var menuList = document.querySelector("ul.dynamic_menu_bar");
   for (var i = 0; i < menuList.childNodes.length; i++) {
-    console.log(menuList.parentElement);
     menuList.childNodes[i].className = "dynamic_menu_bar_item";
   }
 }

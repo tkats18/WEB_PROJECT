@@ -14,7 +14,7 @@ module.exports = {
         {
           from: path.resolve(
             __dirname,
-            "C:/Users/Tato/Desktop/WEB_FINAL/WEB_PROJECT/MEAL_PROJECT/Wdata/photoes/"
+            "C:/Users/Tato/Desktop/WEB_FINAL/WEB_PROJECT/MEAL_PROJECT/data/photoes/"
           ),
           to: path.resolve(
             __dirname,

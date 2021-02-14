@@ -6,11 +6,13 @@
   justify-content: center;
   align-items: center;
 }
+
 .menu_list_main_header_search_ingredient {
   display: flex;
   flex-direction: column;
   width: 45%;
 }
+
 .menu_list_main_header_search_item_input {
   padding: 12px 20px;
   display: inline-block;
@@ -18,6 +20,7 @@
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 .menu_list_main_header_search_item {
   width: 100% !important;
   display: flex;
@@ -25,40 +28,49 @@
   width: 45%;
   margin: 2%;
 }
+
 .half_width {
   width: 42%;
 }
+
 .text_input_container {
   margin-right: 16px;
 }
+
 .select_container {
   margin-left: 16px;
 }
+
 .two_input_wrap {
   width: 100%;
   justify-content: space-between;
   display: flex;
 }
+
 .input_container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 .backgound_image_menu {
   height: 800px;
   width: 100%;
 }
+
 .list_content {
   width: 100%;
   height: 90%;
   position: relative;
 }
+
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .next_button {
   cursor: pointer;
   color: white;
@@ -66,6 +78,7 @@
   font-size: x-large;
   margin: 0 5%;
 }
+
 .previous_button {
   cursor: pointer;
   color: white;
@@ -73,6 +86,7 @@
   font-size: x-large;
   margin: 0 5%;
 }
+
 .list_card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.82);
   transition: 0.3s;
@@ -81,10 +95,11 @@
   margin: 2%;
   height: 40%;
   cursor: pointer;
-  &:hover {
-    box-shadow: 0 8px 16px 0 rgba(219, 214, 214, 0.432);
-  }
 }
+.list_card:hover {
+  box-shadow: 0 8px 16px 0 rgba(219, 214, 214, 0.432);
+}
+
 .list_container {
   display: flex;
   padding: 2px 16px;
@@ -95,19 +110,23 @@
   overflow-wrap: anywhere;
   font-size: x-large;
 }
+
 .menu_list_main {
   width: 100%;
   height: 140%;
 }
+
 .menu_list_main_header {
   width: 100%;
   height: 10%;
   position: relative;
 }
+
 .list_image {
   z-index: -1;
   height: 0;
 }
+
 @media only screen and (max-width: 850px) {
   .backgound_image_menu {
     height: 1170px !important;
@@ -130,10 +149,16 @@
     height: 200px !important;
   }
 }
+
 @media only screen and (max-width: 650px) {
   .list_card {
     width: 29% !important;
     height: 200px !important;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .dynamic_menu_bar {
+    display: flex !important;
   }
 }
 @media only screen and (max-width: 500px) {

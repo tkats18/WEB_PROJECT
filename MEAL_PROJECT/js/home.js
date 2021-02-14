@@ -5,7 +5,6 @@ let currentImageCounter = 0;
 var isSlideShowOn = true;
 const slideshowImages = document.getElementsByClassName("slide_div");
 setInterval(nextImage, nextImageDelay);
-console.log(slideshowImages);
 if (slideshowImages[currentImageCounter])
   slideshowImages[currentImageCounter].style.opacity = 1;
 
@@ -20,7 +19,6 @@ function nextImage() {
 }
 // nextImage();
 export function setSlideShow(isOn) {
-  console.log(isSlideShowOn);
   isSlideShowOn = isOn;
 }
 async function getSlideData() {
@@ -119,9 +117,6 @@ export function homePageInitializationFunction() {
   setMainContent(HomeHtml);
   setSlideShow(true);
   getSlideData();
-  // slideshowImages[currentImageCounter].style.opacity = 1;
-  console.log("omoasbdisba");
-  // nextImage();
 }
 
 // export { homePageInitializationFunction, setSlideShow };
